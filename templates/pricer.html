@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COUPANG PRICING OPTIMIZATION</title>
+</head>
+<body>
+    <h3>查價工廠</h3>
+    <br/>
+    <hr/>
+    <form action="/save_price" method="GET">
+        ID：<input type="text" name="id" style="font-size:14pt;height:20px; width:100px"/>
+        <hr/>
+        <br/>
+        原始最小單位規格：<input type="text" name="size" style="font-size:14pt;height:20px; width:100px"/>
+        <br/>
+        <br/>
+        關鍵字： <input type="text" name="keyword" style="font-size:14pt;height:20px; width:300px"/>
+        <br/>
+        <br/>
+        <hr/>
+        MOMO
+        <br/>
+        價格：<input type="text" name="price_momo" style="font-size:14pt;height:20px; width:100px"/>
+        <br/>
+        內差公式：<input type="text" name="formula_momo" style="font-size:14pt;height:20px; width:500px"/>  不含"="
+        <br/>
+        網址：<input type="text" name="url_momo" style="font-size:14pt;height:20px; width:500px"/>
+        <br/>
+        備註：<input type="text" name="note_momo" style="font-size:14pt;height:20px; width:500px"/>
+        <br/>
+        <br/>
+        <hr/>
+        SHOPEE
+        <br/>
+        價格：<input type="text" name="price_shopee" style="font-size:14pt;height:20px; width:100px"/>
+        <br/>
+        內差公式：<input type="text" name="formula_shopee" style="font-size:14pt;height:20px; width:500px"/>  不含"="
+        <br/>
+        網址：<input type="text" name="url_shopee" style="font-size:14pt;height:20px; width:500px"/>
+        <br/>
+        備註：<input type="text" name="note_shopee" style="font-size:14pt;height:20px; width:500px"/>
+        <br/>
+        <label for="campaign">活動類型：</label>
+        <select name="campaign_select" id="campaign" style="font-size:14pt;height:30px; width:300px">
+            <option value="NA">NA 沒標註</option>
+            <option value="A">A 橘底 指定超商全店免運</option>
+            <option value="B">B 綠底 超商取貨全店免運</option>
+            <option value="C">C 藍底 全店免運</option>
+            <option value="O">O 其他 請來告訴我們</option>
+        </select>
+        <br/>
+        <br/>
+        <hr/>
+        OTHER
+        <br/>
+        價格：<input type="text" name="price_other" style="font-size:14pt;height:20px; width:100px"/>
+        <br/>
+        內差公式：<input type="text" name="formula_other" style="font-size:14pt;height:20px; width:500px"/>  不含"="
+        <br/>
+        網址：<input type="text" name="url_other" style="font-size:14pt;height:20px; width:500px"/>
+        <br/>
+        備註：<input type="text" name="note_other" style="font-size:14pt;height:20px; width:500px"/>
+        <br/>
+        <br/>
+        <hr/>
+        其餘免運門檻：<input type="text" name="threshold" style="font-size:14pt;height:20px; width:50px"/>
+        <br/>
+        <hr/>
+        <button style="font-size:14pt;height:50px; width:150px">送出查價</button>
+    </form>
+        
+</body>
+</html

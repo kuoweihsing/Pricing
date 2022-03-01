@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUDIT PAGE</title>
+</head>
+<body>
+    <h3>AUDIT PAGE</h3>
+    <br/>
+    <br/>
+    <form action="/save_audit" method="GET">
+        審核員：<input type="text" name="audit_id" style="font-size:12pt;height:20px; width:100px"/>
+        <br/>
+        <br/>
+        <div>
+            <label name="object_id">物件ID：{{_id}}</label>
+            <br/>
+            送出時間：{{done_time}}
+            <br/>
+            原始最小單位規格：{{item_size}}&nbsp
+            <label for="size"></label>
+            <select name="opinion_size" id="opinion_size" style="font-size:12pt;height:20px; width:100px">
+                <option value="pass_size">PASS</option>
+                <option value="wrong_size">規格填錯</option>
+            </select>&nbsp
+            審核規格：<input type="text" name="audit_keyword" style="font-size:12pt;height:20px; width:100px"/>
+            <br/>
+            關鍵字：{{item_keyword}}&nbsp
+            <label for="keyword"></label>
+            <select name="opinion_keyword" id="opinion_keyword" style="font-size:12pt;height:20px; width:100px">
+                <option value="pass_keyword">PASS</option>
+                <option value="wrong_keyword">下錯</option>
+            </select>&nbsp
+            審核關鍵字：<input type="text" name="audit_keyword" style="font-size:12pt;height:20px; width:200px"/>
+        </div>
+        <br/>
+        <div>
+            MOMO
+            <br/>
+            <br/>
+            <label for="size_momo">規格：</label>&nbsp
+            <select name="opinion_size_momo" id="opinion_size_momo" style="font-size:12pt;height:20px; width:100px">
+                <option value="pass_size_momo">PASS</option>
+                <option value="wrong_size_momo">規格錯誤</option>
+            </select>
+            <br/>
+            價格：{{price_momo}}&nbsp
+            <label for="price_momo"></label>
+            <select name="opinion_price_momo" id="opinion_price_momo" style="font-size:12pt;height:20px; width:100px">
+                <option value="pass_price_momo">PASS</option>
+                <option value="wrong_price_momo_a">非最低價</option>
+                <option value="wrong_price_momo_b">如何找到</option>
+            </select>&nbsp
+            審核價格：<input type="text" name="audit_price_momo" style="font-size:12pt;height:20px; width:100px"/>
+            <br/>
+            內差公式：{{formula_momo}}&nbsp
+            <label for="formula_momo"></label>
+            <select name="opinion_formula_momo" id="opinion_formula_momo" style="font-size:12pt;height:20px; width:100px">
+                <option value="pass_formula_momo">PASS</option>
+                <option value="wrong_formula_momo">公式錯誤</option>
+            </select>&nbsp
+            審核公式：<input type="text" name="audit_formula_momo" style="font-size:12pt;height:20px; width:200px"/>
+            <br/>
+            網址：{{url_momo}}&nbsp
+            <label for="url_momo"></label>
+            <select name="opinion_url_momo" id="opinion_url_momo" style="font-size:12pt;height:20px; width:100px">
+                <option value="pass_url_momo">PASS</option>
+                <option value="wrong_url_momo">URL錯誤</option>
+            </select>&nbsp
+            審核URL：<input type="text" name="audit_url_momo" style="font-size:12pt;height:20px; width:300px"/>
+            <br/>
+            備註：{{note_momo}}&nbsp
+            <label for="note_momo"></label>
+            <select name="opinion_note_momo" id="opinion_note_momo" style="font-size:12pt;height:20px; width:100px">
+                <option value="pass_note_momo">PASS</option>
+                <option value="wrong_note_momo">備註錯誤</option>
+            </select>&nbsp
+            審核備註：<input type="text" name="audit_note_momo" style="font-size:12pt;height:20px; width:300px"/>
+        </div>
+        <br/>
+        <div>
+            SHOPEE
+            <br/>
+            <br/>
+            <label for="size_shopee">規格：</label>&nbsp
+            <select name="opinion_size_shopee" id="opinion_size_shopee" style="font-size:12pt;height:20px; width:100px">
+                <option value="pass_size_shopee">PASS</option>
+                <option value="wrong_size_shopee">規格錯誤</option>
+            </select>
+            <br/>
+            價格：{{price_shopee}}&nbsp
+            <label for="price_shopee"></label>
+            <select name="opinion_price_shopee" id="opinion_price_shopee" style="font-size:12pt;height:20px; width:100px">
+                <option value="pass_price_shopee">PASS</option>
+                <option value="wrong_price_shopee">如何找到</option>
+            </select>&nbsp
+            審核價格：<input type="text" name="audit_price_shopee" style="font-size:12pt;height:20px; width:100px"/>
+            <br/>
+            內差公式：{{formula_shopee}}&nbsp
+            <label for="formula_shopee"></label>
+            <select name="opinion_formula_shopee" id="opinion_formula_shopee" style="font-size:12pt;height:20px; width:100px">
+                <option value="pass_formula_shopee">PASS</option>
+                <option value="wrong_formula_shopee">公式錯誤</option>
+            </select>&nbsp
+            審核公式：<input type="text" name="audit_formula_shopee" style="font-size:12pt;height:20px; width:200px"/>
+            <br/>
+            網址：{{url_shopee}}&nbsp
+            <label for="url_shopee"></label>
+            <select name="opinion_url_shopee" id="opinion_url_shopee" style="font-size:12pt;height:20px; width:100px">
+                <option value="pass_url_shopee">PASS</option>
+                <option value="wrong_url_shopee">URL錯誤</option>
+            </select>&nbsp
+            審核URL：<input type="text" name="audit_url_shopee" style="font-size:12pt;height:20px; width:300px"/>
+            <br/>
+            備註：{{note_shopee}}&nbsp
+            <label for="note_shopee"></label>
+            <select name="opinion_note_shopee" id="opinion_note_shopee" style="font-size:12pt;height:20px; width:100px">
+                <option value="pass_note_shopee">PASS</option>
+                <option value="wrong_note_shopee">備註錯誤</option>
+            </select>&nbsp
+            審核備註：<input type="text" name="audit_note_shopee" style="font-size:12pt;height:20px; width:300px"/>
+            <br/>
+            活動類型：{{campaign}}
+            <label for="campaign"></label>
+            <select name="opinion_campaign" id="opinion_campaign" style="font-size:12pt;height:20px; width:100px">
+                <option value="pass_campaign">PASS</option>
+                <option value="wrong_campaign">活動錯誤</option>
+            </select>&nbsp
+        </div>
+        <br/>
+        <div>
+            OTHER
+            <br/>
+            <br/>
+            <label for="size_other">規格：</label>&nbsp
+            <select name="opinion_size_other" id="opinion_size_other" style="font-size:12pt;height:20px; width:100px">
+                <option value="pass_size_other">PASS</option>
+                <option value="wrong_size_other">規格錯誤</option>
+            </select>
+            <br/>
+            價格：{{price_other}}&nbsp
+            <label for="price_other"></label>
+            <select name="opinion_price_other" id="opinion_price_other" style="font-size:12pt;height:20px; width:100px">
+                <option value="pass_price_other">PASS</option>
+                <option value="wrong_price_other">如何找到</option>
+            </select>&nbsp
+            審核價格：<input type="text" name="audit_price_other" style="font-size:12pt;height:20px; width:100px"/>
+            <br/>
+            內差公式：{{formula_other}}&nbsp
+            <label for="formula_other"></label>
+            <select name="opinion_formula_other" id="opinion_formula_other" style="font-size:12pt;height:20px; width:100px">
+                <option value="pass_formula_other">PASS</option>
+                <option value="wrong_formula_other">公式錯誤</option>
+            </select>&nbsp
+            審核公式：<input type="text" name="audit_formula_other" style="font-size:12pt;height:20px; width:200px"/>
+            <br/>
+            網址：{{url_other}}&nbsp
+            <label for="url_other"></label>
+            <select name="opinion_url_other" id="opinion_url_other" style="font-size:12pt;height:20px; width:100px">
+                <option value="pass_url_other">PASS</option>
+                <option value="wrong_url_other">URL錯誤</option>
+            </select>&nbsp
+            審核URL：<input type="text" name="audit_url_other" style="font-size:12pt;height:20px; width:300px"/>
+            <br/>
+            備註：{{note_other}}&nbsp
+            <label for="note_other"></label>
+            <select name="opinion_note_other" id="opinion_note_other" style="font-size:12pt;height:20px; width:100px">
+                <option value="pass_note_other">PASS</option>
+                <option value="wrong_note_other">備註錯誤</option>
+            </select>&nbsp
+            審核備註：<input type="text" name="audit_note_other" style="font-size:12pt;height:20px; width:300px"/>
+        </div>
+        <br/>
+        <div>
+            其餘免運門檻：{{threshold}}
+            <label for="threshold"></label>
+            <select name="opinion_threshold" id="opinion_threshold" style="font-size:12pt;height:20px; width:100px">
+                <option value="pass_threshold">PASS</option>
+                <option value="wrong_threshold">門檻錯誤</option>
+            </select>&nbsp
+            審核門檻：<input type="text" name="audit_threshold" style="font-size:12pt;height:20px; width:100px"/>
+        </div>
+        <div>
+            <button style="font-size:14pt;height:50px; width:150px">送出審核</button>
+        </div>
+    </form>
+</body>
+</html>
